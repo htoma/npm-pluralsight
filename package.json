@@ -4,17 +4,27 @@
   "description": "pluralsight learning",
   "main": "index.js",
   "scripts": {
+    "pretest": "npm run lint",
     "test": "mocha test -u bdd -R spec",
-    "start": "node index.js"
+    "start": "node index.js",
+    "greet": "echo 'Hello'",
+    "pregreet": "echo 'This comes before Hello'",
+    "postgreet": "echo 'This comes after Hello'",
+    "lint": "jshint index.js"
   },
   "author": "Horia",
   "license": "MIT",
   "devDependencies": {
+    "jshint": "^2.9.7",
     "mocha": "^5.2.0",
     "should": "^13.2.3",
     "supertest": "^3.3.0"
   },
   "dependencies": {
     "koa": "^2.6.2"
+  },
+  "jshintConfig": {
+    "esnext": "true",
+    "noyield": "true"
   }
 }
