@@ -10,7 +10,8 @@
     "greet": "echo 'Hello'",
     "pregreet": "echo 'This comes before Hello'",
     "postgreet": "echo 'This comes after Hello'",
-    "lint": "jshint ."
+    "lint": "jshint .",
+    "compile:ts": "tsc -outDir ./lib --module commonjs ./src/typescripts/tscode.ts"
   },
   "author": "Horia",
   "license": "MIT",
@@ -18,7 +19,8 @@
     "jshint": "^2.9.7",
     "mocha": "^5.2.0",
     "should": "^13.2.3",
-    "supertest": "^3.3.0"
+    "supertest": "^3.3.0",
+    "typescript": "^3.2.2"
   },
   "dependencies": {
     "koa": "^2.6.2"
