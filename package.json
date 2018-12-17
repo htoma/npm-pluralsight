@@ -4,23 +4,30 @@
   "description": "pluralsight learning",
   "main": "index.js",
   "scripts": {
-    "pretest": "npm run lint",
+    "pretest": "npm run compile && npm run lint",
     "test": "mocha test -u bdd -R spec",
     "start": "node index.js",
     "greet": "echo 'Hello'",
     "pregreet": "echo 'This comes before Hello'",
     "postgreet": "echo 'This comes after Hello'",
     "lint": "jshint .",
-    "compile:ts": "tsc -outDir ./lib --module commonjs ./src/typescripts/tscode.ts"
+    "compile:ts": "tsc -outDir ./lib --module commonjs ./src/typescripts/tscode.ts",
+    "compile": "npm run compile:ts",
+    "precompile": "npm run clean",
+    "clean": "rimraf lib/*",
+    "build:bundle": "browserify ./lib/tscode.js | uglifyjs -mc > ./public/js/out.min.js"
   },
   "author": "Horia",
   "license": "MIT",
   "devDependencies": {
+    "browserify": "^16.2.3",
     "jshint": "^2.9.7",
     "mocha": "^5.2.0",
+    "rimraf": "^2.6.2",
     "should": "^13.2.3",
     "supertest": "^3.3.0",
-    "typescript": "^3.2.2"
+    "typescript": "^3.2.2",
+    "uglify-js": "^3.4.9"
   },
   "dependencies": {
     "koa": "^2.6.2"
