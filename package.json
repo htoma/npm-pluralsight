@@ -1,6 +1,6 @@
 {
   "name": "horia",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "pluralsight learning",
   "main": "index.js",
   "scripts": {
@@ -38,7 +38,7 @@
     "noyield": "true"
   },
   "repository": {
-	  "type": "git",
-	  "url": "https://github.com/htoma/npm-pluralsight"
+    "type": "git",
+    "url": "https://github.com/htoma/npm-pluralsight"
   }
 }
