@@ -1,6 +1,6 @@
 {
   "name": "horia",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "pluralsight learning",
   "main": "index.js",
   "scripts": {
@@ -15,8 +15,8 @@
     "compile": "npm run compile:ts",
     "precompile": "npm run clean",
     "clean": "rimraf lib/*",
-	"build:bundle": "browserify ./lib/tscode.js | uglifyjs -mc > ./public/js/out.min.js",
-	"version:patch": "npm version patch"
+    "build:bundle": "browserify ./lib/tscode.js | uglifyjs -mc > ./public/js/out.min.js",
+    "version:patch": "npm version patch"
   },
   "author": "Horia",
   "license": "MIT",
