@@ -16,7 +16,8 @@
     "precompile": "npm run clean",
     "clean": "rimraf lib/*",
     "build:bundle": "browserify ./lib/tscode.js | uglifyjs -mc > ./public/js/out.min.js",
-    "version:patch": "npm version patch"
+	"version:patch": "npm version patch",
+	"push:origin": "git push --tags origin HEAD:master"
   },
   "author": "Horia",
   "license": "MIT",
